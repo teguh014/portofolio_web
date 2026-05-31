@@ -232,7 +232,8 @@ img {
 .hero-cta {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .social-links {
@@ -314,16 +315,13 @@ img {
 
 .about-text p {
     text-align: justify;
-    /* Membuat teks rata kanan-kiri */
     text-justify: inter-word;
-    /* Mengatur spasi antar kata agar lebih rapi */
+    text-align-last: justify; /* Memaksa baris terakhir ikut rata penuh */
     line-height: 1.8;
-    /* Menambah sedikit spasi antar baris agar lebih enak dibaca */
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
 }
-
 .about-image {
     display: flex;
     justify-content: center;
@@ -716,6 +714,69 @@ textarea.form-control {
     }
 }
 
+/* --- Project Gallery --- */
+.project-gallery {
+    margin-top: 4rem;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.gallery-item {
+    background-color: var(--bg-card);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.gallery-img-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+.gallery-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.gallery-info {
+    padding: 1.5rem;
+}
+
+.gallery-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.gallery-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
 /* --- Responsive Design --- */
 @media screen and (max-width: 992px) {
 
@@ -758,3 +819,225 @@ textarea.form-control {
         padding: 2rem;
     }
 }
+/* Styling Khusus Ikon Medsos di Footer */
+.footer-socials {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    color: #ffffff; /* Warna putih awal */
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #00a8ff; /* Warna biru saat hover (sesuaikan dengan logo kamu) */
+    transform: translateY(-3px); /* Efek sedikit melompat ke atas */
+}
+
+/* Pastikan footer background tetap gelap seperti di gambar */
+.footer {
+    background-color: #050a18; /* Biru sangat gelap sesuai gambar */
+    padding: 40px 0 20px;
+    color: white;
+}
+
+.footer-logo {
+    color: #00a8ff;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.footer-text {
+    margin: 15px 0;
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Container gambar */
+.project-img-wrapper {
+    position: relative;
+    width: 100%;
+    /* Menggunakan aspect-ratio agar ukuran seragam (misal: 16:9 untuk bentuk lanskap) */
+    aspect-ratio: 16 / 9; 
+    /* Jika Anda lebih suka menetapkan tinggi tetap (misalnya 220px), hapus baris di atas dan gunakan: height: 220px; */
+    overflow: hidden;
+    background-color: #f8fafc; /* Warna latar belakang sementara gambar dimuat */
+}
+
+/* Pengaturan gambar di dalamnya */
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover adalah kunci agar gambar dipotong (crop) pas dengan kotak tanpa merusak rasio (distorsi) */
+    object-fit: cover; 
+    /* Memastikan gambar selalu berpusat di tengah saat di-crop */
+    object-position: center; 
+    transition: transform 0.5s ease;
+}
+
+/* Efek zoom saat hover (opsional, sudah ada sebelumnya) */
+.project-card:hover .project-img-wrapper img {
+    transform: scale(1.05);
+}
+/* Styling Utama Footer */
+.portfolio-footer {
+    background-color: #1e293b; /* Warna latar belakang gelap (opsional, bisa diubah) */
+    padding: 3rem 0 1.5rem;
+    margin-top: 5rem;
+}
+
+.portfolio-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Memusatkan semua konten */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Ikon Media Sosial */
+.footer-socials {
+    display: flex;
+    gap: 1.5rem; /* Jarak antar ikon */
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #334155;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Efek Hover pada Ikon */
+.social-icon:hover {
+    background-color: #2563eb; /* Biru terang saat kursor diarahkan */
+    transform: translateY(-5px); /* Efek ikon terangkat */
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Bagian Bawah (Copyright) */
+.footer-bottom {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 1px solid #334155;
+    padding-top: 1.5rem;
+    width: 100%;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* =========================================
+   STYLING HALAMAN DETAIL PROYEK (PROJECT 1)
+   ========================================= */
+
+/* Jarak area utama detail proyek */
+.project-detail {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+/* Tombol "Back to Projects" */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #2563eb; /* Warna biru aksen */
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: #1d4ed8;
+    transform: translateX(-5px);
+}
+
+/* Gambar Utama Proyek */
+.project-detail-img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Judul Proyek */
+.project-detail-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+/* Paragraf Deskripsi */
+.project-detail-desc {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Paragraf Deskripsi untuk Background Gelap */
+.project-detail-desc {
+    font-size: 1.1rem;
+    color: #cbd5e1; /* Berubah menjadi abu-abu terang */
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Daftar Fitur (UL & LI) untuk Background Gelap */
+.project-features {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2.5rem;
+    color: #cbd5e1; /* Berubah menjadi abu-abu terang */
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.project-features li {
+    margin-bottom: 0.8rem;
+}
+
+/* Mempertegas teks miring di dalam fitur (misal: real-time, user-friendly) */
+.project-features li em {
+    color: #ffffff; /* Putih terang agar kata kunci lebih menonjol */
+    font-weight: 600;
+    font-style: italic; 
+}
+
+/* Styling untuk teks deskripsi di bagian Hero */
+.hero-description {
+    text-align: justify;
+    text-justify: inter-word; /* Membantu mengatur spasi antar kata agar lebih rapi */
+    line-height: 1.8; /* Memberikan jarak antar baris agar tetap nyaman dibaca */
+    margin-bottom: 2rem; /* Jarak bawah jika ada tombol setelah teks ini */
+}
+

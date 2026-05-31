@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Penyewaan Gedung Berbasis Website | Hafiidh Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        .project-detail { padding-top: 120px; padding-bottom: 50px; }
+
+        .project-detail-img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+
+        .project-detail-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .project-detail-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--accent-hover);
+            transform: translateX(-5px);
+        }
+
+        /* GALLERY */
+        .project-gallery {
+            margin-top: 50px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="nav container">
+        <a href="index.html" class="nav-logo">Hafiidh.</a>
+        <ul class="nav-menu">
+            <li><a href="index.html#home" class="nav-link">Home</a></li>
+            <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="project-detail container">
+
+        <a href="index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+
+        <!-- MAIN IMAGE -->
+        <img src="assets/images/1.jpg"
+             alt="Web-Based Hall Rental Information System"
+             class="project-detail-img"
+             onclick="openImage(this.src)">
+
+        <h1 class="project-detail-title">
+            Sistem Informasi Penyewaan Gedung Berbasis Website
+        </h1>
+
+        <p class="project-detail-desc">
+    Sistem Informasi Penyewaan Gedung Berbasis Website ini adalah sebuah platform 
+    digital komprehensif yang dirancang untuk mendigitalisasi dan menyederhanakan 
+    alur penyewaan fasilitas olahraga (seperti GOR). Aplikasi ini menjembatani 
+    interaksi antara penyewa dan admin pengelola gedung agar lebih efisien dan transparan. 
+    Fitur utama dari sistem ini mencakup:
+</p>
+
+<h3 class="project-detail-desc">
+    Fitur utama dari sistem ini mencakup:
+</h3>
+
+<ul class="project-features">
+    <li>Manajemen jadwal dan ketersediaan lapangan secara <em>real-time</em>.</li>
+    <li>Pengajuan <em>request</em> sewa oleh pelanggan secara mandiri.</li>
+    <li>Sistem verifikasi dan persetujuan (<em>approval</em>) penyewaan oleh admin.</li>
+    <li>Pengelolaan manajemen data pengguna dan fasilitas.</li>
+    <li>Pelacakan status pembayaran dalam satu <em>dashboard</em> yang terintegrasi dan <em>user-friendly</em>.</li>
+</ul>
+        <a href="https://github.com/teguh014/SewaLapangan.git"
+           target="_blank"
+           class="btn btn-primary">
+            View on GitHub <i class="fab fa-github" style="margin-left:5px;"></i>
+        </a>
+
+    </section>
+
+    <!-- GALLERY -->
+<section class="project-detail container">
+            <div class="project-gallery">
+            <h2 class="gallery-title">Project Gallery</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/images/BLT1.jpg" alt="Menu Selection">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Menu Selection</h3>
+                        <p>Katalog produk roti dan kue yang menampilkan harga serta deskripsi lengkap.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/images/BLT2.jpg" alt="Shopping Cart">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Shopping Cart</h3>
+                        <p>Fitur keranjang belanja interaktif yang memudahkan pelanggan mengelola pesanan.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/images/BLT3.jpg" alt="Checkout Process">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Checkout Process</h3>
+                        <p>Alur pembayaran yang mulus dengan pilihan pengiriman atau pengambilan di toko.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+    <img id="lightbox-img" src="" alt="Preview">
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-copyright">
+            &copy; 2024 Hafiidh Teguh Surya Putra. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<script>
+    function openImage(src) {
+        document.getElementById("lightbox-img").src = src;
+        document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeImage() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

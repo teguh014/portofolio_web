@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Design System | Hafiidh Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .project-detail { padding-top: 120px; padding-bottom: 50px; }
+        .project-detail-img { width: 100%; max-height: 600px; object-fit: cover; border-radius: 20px; margin-bottom: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .project-detail-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-primary); }
+        .project-detail-desc { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent-color); font-weight: 600; margin-bottom: 2rem; transition: var(--transition); }
+        .back-link:hover { color: var(--accent-hover); transform: translateX(-5px); }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">Hafiidh.</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-detail container">
+            <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <img src="assets/images/6.jpg" alt="E-Commerce Design System" class="project-detail-img">
+            <h1 class="project-detail-title">E-Commerce Design System: Building a Scalable Checkout Interface</h1>
+            <p class="project-detail-desc">This project focuses on designing a high-conversion E-Commerce 
+                Checkout System optimized for mobile users. The goal is to minimize friction during the final
+                stages of the purchasing journey by creating a scalable, intuitive, and aesthetically pleasing 
+                interface.</p>
+            <a href="https://www.behance.net/gallery/192630683/UIUX-Design-E-Commerce-Checkout" target="_blank" class="btn btn-primary">View on Behance <i class="fab fa-behance" style="margin-left:5px;"></i></a>
+        </section>
+        <section class="project-detail container">
+            <div class="project-gallery">
+            <h2 class="gallery-title">Project Gallery</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/images/6.jpg" alt="Product Catalog">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Product Catalog</h3>
+                        <p>Katalog produk e-commerce yang menampilkan variasi barang dengan UI/UX yang modern.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/images/6.jpg" alt="Cart View">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Cart View</h3>
+                        <p>Tampilan keranjang belanja yang intuitif untuk mengonfirmasi jumlah dan varian produk.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-img-wrapper">
+                        <img src="assets/images/6.jpg" alt="Checkout Flow">
+                    </div>
+                    <div class="gallery-info">
+                        <h3>Checkout Flow</h3>
+                        <p>Alur pembayaran satu halaman (single-page checkout) untuk meminimalkan pembatalan transaksi.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-copyright">
+                &copy; 2024 Hafiidh Teguh Surya Putra. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
