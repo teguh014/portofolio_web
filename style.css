@@ -1041,3 +1041,10 @@ textarea.form-control {
     margin-bottom: 2rem; /* Jarak bawah jika ada tombol setelah teks ini */
 }
 
+.gallery-info p {
+    text-align: justify;
+}
+
+.project-description {
+    text-align: justify;
+}
