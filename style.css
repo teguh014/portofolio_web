@@ -1006,7 +1006,7 @@ textarea.form-control {
 /* Paragraf Deskripsi untuk Background Gelap */
 .project-detail-desc {
     font-size: 1.1rem;
-    color: #cbd5e1; /* Berubah menjadi abu-abu terang */
+    color: #475569; /* Berubah menjadi abu-abu terang */
     line-height: 1.8;
     margin-bottom: 1.5rem;
     text-align: justify;
@@ -1017,7 +1017,7 @@ textarea.form-control {
     list-style-type: disc;
     padding-left: 1.5rem;
     margin-bottom: 2.5rem;
-    color: #cbd5e1; /* Berubah menjadi abu-abu terang */
+    color: #bfcee0; /* Berubah menjadi abu-abu terang */
     font-size: 1.05rem;
     line-height: 1.8;
 }
